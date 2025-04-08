@@ -12,7 +12,7 @@ import time
 load_dotenv()
 
 # Sidebar for user inputs
-st.sidebar.image("logo.png", use_container_width=True)  # Add your logo file in the same directory as the script
+#st.sidebar.image("logo.png", use_container_width=True)  # Add your logo file in the same directory as the script
 st.sidebar.title("Configuration")
 
 # Prompt user for sensitive keys in the sidebar
