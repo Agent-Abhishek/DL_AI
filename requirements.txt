@@ -1,0 +1,40 @@
+langchain
+python-dotenv
+langchain-openai
+bs4
+faiss-cpu
+langchain-core
+langchain-community
+pdfplumber
+pypdf
+arxiv
+pymupdf
+wikipedia
+lxml
+langchain_huggingface
+langchain-groq
+langgraph
+IPython
+langgraph-cli[inmem]
+langchain-anthropic==0.3.7
+langmem==0.0.8
+prompts
+prompt_toolkit
+openai
+streamlit
+pandas
+numpy
+langchain_experimental
+PyPDF2
+tabulate
+tiktoken
+azure.identity
+azure.keyvault
+pyathena
+boto3
+# langchain==0.3.18
+# langchain-openai==0.3.5
+# langchain-anthropic==0.3.7
+# langgraph==0.2.72
+# langmem==0.0.8
+# python-dotenv==1.0.1
