@@ -12,8 +12,12 @@ import time
 load_dotenv()
 
 # Sidebar for user inputs
-#st.sidebar.image("logo.png", use_container_width=True)  # Add your logo file in the same directory as the script
-st.sidebar.title("Configuration")
+# Resolve the absolute path to the logo file
+# Add your logo file in the same directory as the script
+logo_path = os.path.join(os.path.dirname(__file__), "logo.png")
+st.sidebar.image(logo_path, use_container_width=True)
+
+st.sidebar.title("Login Credentials")
 
 # Prompt user for sensitive keys in the sidebar
 openai_api_key = st.sidebar.text_input("Enter your OpenAI API Key", type="password")
@@ -39,10 +43,10 @@ athena_client = boto3.client(
 )
 
 # Streamlit app layout
-st.title("Chat with AWS Athena Tables")
+st.title("Chat with Pharma Sales Data Consultant")
 
 # User input for natural language question
-user_question = st.text_area("Ask a question in natural language", placeholder="e.g., How many rows are in the table?")
+user_question = st.text_area("Ask a question to your Pharma sales database", placeholder="e.g., How many rows are in the table?")
 
 # Function to fetch schema information from Athena
 def fetch_schema(database_name):
