@@ -26,7 +26,7 @@ database_name = st.sidebar.text_input("Enter Athena Database Name", placeholder=
 
 # Load other keys from .env
 aws_access_key = os.getenv("AWS_ACCESS_KEY_ID")
-aws_region = os.getenv("AWS_REGION", "ap-south-1")
+aws_region = os.getenv("AWS_REGION", "us-east-1")
 aws_staging_dir = os.getenv("AWS_S3_STAGING_DIR")
 
 # Ensure required keys are provided
