@@ -59,7 +59,7 @@ def fetch_schema(database_name):
         response = athena_client.start_query_execution(
             QueryString=query,
             QueryExecutionContext={"Database": database_name},
-            ResultConfiguration={"OutputLocation": "s3://llm-athena-results/"},
+            ResultConfiguration={"OutputLocation": "s3://agentic-bucket-1/"},
         )
         query_execution_id = response["QueryExecutionId"]
 
@@ -132,7 +132,7 @@ def execute_athena_query(query, database):
         response = athena_client.start_query_execution(
             QueryString=query,
             QueryExecutionContext={"Database": database},
-            ResultConfiguration={"OutputLocation": "s3://llm-athena-results/"},
+            ResultConfiguration={"OutputLocation": "s3://agentic-bucket-1/"},
         )
         query_execution_id = response["QueryExecutionId"]
 
