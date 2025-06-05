@@ -26,7 +26,7 @@ database_name = st.sidebar.text_input("Enter Athena Database Name", placeholder=
 
 # Load other keys from .env
 aws_access_key = os.getenv("AWS_ACCESS_KEY_ID")
-aws_region = os.getenv("AWS_REGION", "us-east-1")
+aws_region = os.getenv("AWS_REGION", "ap-south-1")
 aws_staging_dir = os.getenv("AWS_S3_STAGING_DIR")
 
 # Ensure required keys are provided
@@ -59,7 +59,7 @@ def fetch_schema(database_name):
         response = athena_client.start_query_execution(
             QueryString=query,
             QueryExecutionContext={"Database": database_name},
-            ResultConfiguration={"OutputLocation": "s3://awsbucketforagents/"},
+            ResultConfiguration={"OutputLocation": "s3://llm-athena-results/"},
         )
         query_execution_id = response["QueryExecutionId"]
 
@@ -132,7 +132,7 @@ def execute_athena_query(query, database):
         response = athena_client.start_query_execution(
             QueryString=query,
             QueryExecutionContext={"Database": database},
-            ResultConfiguration={"OutputLocation": "s3://awsbucketforagents/"},
+            ResultConfiguration={"OutputLocation": "s3://llm-athena-results/"},
         )
         query_execution_id = response["QueryExecutionId"]
 
