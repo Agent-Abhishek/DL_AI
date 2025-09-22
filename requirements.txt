@@ -1,38 +1,115 @@
+# Core AI and Language Processing
 langchain
-python-dotenv
 langchain-openai
-bs4
-faiss-cpu
+langchain-anthropic==0.3.7
 langchain-core
 langchain-community
-pdfplumber
-pypdf
-arxiv
-pymupdf
-wikipedia
-lxml
 langchain_huggingface
 langchain-groq
+langchain_experimental
 langgraph
-IPython
 langgraph-cli[inmem]
-langchain-anthropic==0.3.7
 langmem==0.0.8
-prompts
-prompt_toolkit
 openai
+tiktoken
+
+# Web Framework and UI
 streamlit
+fastapi
+uvicorn[standard]
+jinja2
+python-multipart
+
+# Data Processing and Analysis
 pandas
 numpy
-langchain_experimental
-PyPDF2
-tabulate
-tiktoken
-azure.identity
-azure.keyvault
-pyathena
-boto3
+scipy
 plotly
+tabulate
+
+# Database and Caching
+psycopg2-binary
+sqlalchemy
+alembic
+redis
+asyncpg
+
+# Web Scraping and HTTP
+requests
+httpx
+beautifulsoup4
+lxml
+selenium
+playwright
+scrapy
+
+# Document Processing
+PyPDF2
+pdfplumber
+pypdf
+pymupdf
+python-docx
+
+# Async and Background Tasks
+celery
+schedule
+asyncio
+aiohttp
+aiofiles
+
+# Configuration and Environment
+python-dotenv
+pydantic
+pydantic-settings
+toml
+pyyaml
+
+# Security and Authentication
+cryptography
+passlib[bcrypt]
+python-jose[cryptography]
+bcrypt
+python-multipart
+
+# Monitoring and Logging
+prometheus-client
+structlog
+sentry-sdk
+
+# Cloud and External Services
+boto3
+azure-identity
+azure-keyvault
+pyathena
+
+# Utilities
+click
+rich
+tqdm
+python-dateutil
+pytz
+
+# Development and Testing (optional)
+pytest
+pytest-asyncio
+pytest-mock
+black
+flake8
+mypy
+pre-commit
+
+# Communication and Integrations
+slack-sdk
+microsoft-teams
+jira
+requests-oauthlib
+
+# Additional Libraries for EULA Analysis
+difflib  # Part of Python stdlib but explicitly listed
+hashlib  # Part of Python stdlib but explicitly listed
+xml.etree.ElementTree  # Part of Python stdlib but explicitly listed
+
+# Specific versions for compatibility
 # langchain==0.3.18
 # langchain-openai==0.3.5
 # langchain-anthropic==0.3.7
